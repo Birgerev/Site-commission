@@ -4,31 +4,31 @@
 		<meta charset="utf-8">
 
 		<!-- TODO comments-->
-		<title>Chat - Logga In</title>
+		<title>Chat - Skapa konto</title>
 		<!-- <link rel="icon" type="Images/x-icon" href="Images/Logga.png">-->
 
 		<link rel="stylesheet" href="styles/style.css">
 		<link rel="stylesheet" href="styles/contentContainers.css">
 
-		<script src="scripts/loginForm.js"></script>
+		<script src="scripts/registerForm.js"></script>
 	</head>
 	<body>
 		<div class="contentWindow">
 			<div class="containerTitle">
-				<h1>Logga in!</h1>
+				<h1>Skapa konto!</h1>
 			</div>
 
 			<h4>Användarnamn</h4>
-  		<input type="text" id="name" name="name">
+  		<input type="text" id="name">
 
 			<h4>Lösenord</h4>
-  		<input type="password" id="password" name="password">
+  		<input type="password" id="password">
 
 			<br><br><br>
 			<a href="index.html" class="button">Tillbaka</a>
-			<a href="logga_in.html" class="button">Logga in</a>
+			<a class="button" onclick="onClick()">Skapa konto</a>
 			<br><br>
-			<a href="skapa_konto.html">Skapa ett konto</a> istället
+			<a href="logga_in.html">Logga in</a> istället
 		</div>
 	</body>
 </html>
