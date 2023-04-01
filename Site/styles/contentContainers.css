@@ -1,0 +1,81 @@
+.contentPanel {
+  background-color: #1F1F1F;
+
+  display:flex;
+  flex-direction:column;
+
+  margin: auto;
+  height: 100%;
+  width: 60%;
+}
+.contentWindow {
+  background-color: #1F1F1F;
+
+  margin: auto;
+  margin-top: 15%;
+  padding-bottom: 20px;
+  width: 500px;
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.containerTitle {
+  background-color: #292929;
+
+  width: auto;
+  padding-left: 2%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  text-align: left;
+}
+.containerTitle h1  {
+  font-size: 20px;
+  margin: 0;
+}
+
+#messageHistory {
+  flex: 1;/*Take upp remaining space from Title & chatbox*/
+
+  padding-left: 1.5%;
+
+  /*Make messages stack from bottom to top*/
+  display: flex;
+  flex-direction: column-reverse;
+
+  /*Add scrollbar when messages overflow*/
+  overflow: auto;
+}
+
+.message {
+  margin-bottom: 10px;/*space between messages*/
+
+  width: auto;/*Take up 100% of parent container*/
+}
+.message h1 {/*Message title */
+  font-size: 20px;
+  color:#D41F42;
+}
+.message h1, .message p {
+  margin: 0px;
+}
+
+#chatbox {
+    background-color: #FFFFFF;
+
+    margin: auto;/*Position in middle*/
+
+    width: 96%;
+    height: 30px;
+    padding-top: 15px;
+    padding-left: 10px;
+    border-radius: 5px;
+
+    text-align: left;
+    color: #121212;
+}
+
+.logInAlternatives {
+  text-align: center;
+}
