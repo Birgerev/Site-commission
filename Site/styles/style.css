@@ -13,6 +13,12 @@ a {
   font-weight: bold;
 }
 
+/*Input box styling*/
+input {
+  height: 30px;
+  width: 400px;
+}
+
 /*Button Styling*/
 .button {
   background-color: #D41F42;
@@ -23,7 +29,7 @@ a {
   border-radius: 5px;
 }
 
-input {
-  height: 30px;
-  width: 400px;
+/*red error text*/
+#errorText {
+  color: #D41F42;
 }
