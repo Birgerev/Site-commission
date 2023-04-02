@@ -21,7 +21,8 @@ function errorResponse(error){
 }
 
 function recievedToken(token) {
-		console.log('Token: ' + token);
+		//Store token in cookies, so we can use it on other pages as authorisation
+		document.cookie = token;
 
 		//Redirect
 		window.location.href = "index.html";
