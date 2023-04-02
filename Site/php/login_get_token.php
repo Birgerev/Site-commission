@@ -15,15 +15,19 @@ $password = $_GET['password'];
 $result = $conn->query("SELECT password FROM registered_accounts WHERE account_name = '$account_name'");
 
 //Return if no account with name exists
-if($result->num_rows == 0)
+if($result->num_rows == 0){
+  http_response_code(400);  //Bad request response (no account was found)
   die("No accounts with name found");
+}
 
 //Get password in database
 $database_password = $result->fetch_assoc()['password'];
 
 //Compare database password and sent password to see if they match
-if($password != $database_password)
+if($password != $database_password){
+  http_response_code(401);  //Unautharized response (wrong password)
   die("Password was wrong");
+}
 
 //Succesfull login
 //Generate a token which user uses to validate theirself
