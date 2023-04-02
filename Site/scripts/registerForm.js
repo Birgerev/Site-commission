@@ -14,6 +14,12 @@ function onClick() {
 		.catch(error => errorResponse(error));
 }
 
+function errorResponse(error){
+		console.error('HTML-request error: ' + error);
+
+		document.getElementById("errorText").textContent = "Misslyckades (Kontot kanske redan fanns?): " + error;
+}
+
 function recievedToken(token) {
 		console.log('Token: ' + token);
 
@@ -21,10 +27,4 @@ function recievedToken(token) {
 		window.location.href = "index.html";
 
 		//TODO save cookie
-}
-
-function errorResponse(error){
-		console.error('HTML-request error: ' + error);
-
-		document.getElementById("errorText").textContent = "Misslyckades (Kontot kanske redan fanns?): " + error;
 }
