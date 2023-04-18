@@ -10,12 +10,14 @@
 
 		<link rel="stylesheet" href="styles/style.css">
 		<link rel="stylesheet" href="styles/contentContainers.css">
-		<!-- <script src="myScript.js"></script> -->
+
 	</head>
 	<body>
 		<div class="contentPanel">
 			<div class="containerTitle">
 				<h1>Global Chat</h1>
+				<br>
+				<a class="button visibleWhenLoggedIn" onclick="onClickLogOut()">Logga ut</a>
 			</div>
 
 			<div id="messageHistory">
@@ -30,7 +32,7 @@
 			</div>
 
 			<div id="chatbox">
-				<div class="logInAlternatives">
+				<div class="logInAlternatives visibleWhenLoggedOut">
 					<a href="logga_in.html" class="button">Logga in</a>
 					eller
 					<a href="skapa_konto.html" class="button">Skapa ett konto</a>
@@ -38,4 +40,7 @@
 			</div>
 		</div>
 	</body>
+
+	<script src="scripts/chat.js"></script>
+
 </html>
