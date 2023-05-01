@@ -3,9 +3,9 @@ var isLoggedIn = (document.cookie != "empty");
 
 //Remove all elements that should be hidden when logged in/ logged out
 if(isLoggedIn)
-		document.querySelectorAll('.visibleWhenLoggedOut').forEach(element => element.remove());
+		document.querySelectorAll('.showLoggedOut').forEach(element => element.remove());
 else
-		document.querySelectorAll('.visibleWhenLoggedIn').forEach(element => element.remove());
+		document.querySelectorAll('.showLoggedIn').forEach(element => element.remove());
 
 //Method called when log out button is pressed
 function onClickLogOut() {

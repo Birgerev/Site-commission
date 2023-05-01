@@ -17,7 +17,7 @@
 			<div class="containerTitle">
 				<h1>Forum</h1>
 				<br>
-				<a class="button visibleWhenLoggedIn" onclick="onClickLogOut()">Logga ut</a>
+				<a class="button showLoggedIn" onclick="onClickLogOut()">Logga ut</a>
 			</div>
 
 			<div id="messageHistory">
@@ -31,10 +31,9 @@
 				</div>
 			</div>
 
-				<div class="logInAlternatives visibleWhenLoggedOut">
-				</div>
+			<textarea type="text" id="chatbox" class="showLoggedIn"></textarea>
 
-				<input type="text" id="chatInput" class="visibleWhenLoggedIn">
+			<div class="logInBox showLoggedOut">
 				<a href="logga_in.html" class="button">Logga in</a>
 				eller
 				<a href="skapa_konto.html" class="button">Skapa ett konto</a>
