@@ -63,19 +63,27 @@
 
 #chatbox {
     background-color: #FFFFFF;
+    color: #121212;
+
+    margin: auto;/*Position in middle*/
+    width: 96%;
+    height: 10%;
+
+    border-radius: 10px;
+    font-size: 15px;
+
+}
+
+.logInBox {
+    background-color: #FFFFFF;
+    color: #121212;
 
     margin: auto;/*Position in middle*/
 
     width: 96%;
-    height: 5%;
+    height: 4%;
+    padding-top: 15px;
     border-radius: 5px;
 
-    text-align: left;
-    color: #121212;
-}
-
-.logInAlternatives {
-  text-align: center;
-  margin-top: 15px;
-  margin-left: 10px;
+    text-align: center;
 }
