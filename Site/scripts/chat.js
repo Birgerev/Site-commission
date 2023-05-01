@@ -1,6 +1,8 @@
 //Determine whether we are logged in based on if cookie is set
 var isLoggedIn = (document.cookie != "empty");
 
+//We use two classes to identify which elements should be shown when logged in or when logged out
+//".showLoggedOut" & ".showLoggedIn"
 //Remove all elements that should be hidden when logged in/ logged out
 if(isLoggedIn)
 		document.querySelectorAll('.showLoggedOut').forEach(element => element.remove());
