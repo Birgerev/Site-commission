@@ -8,13 +8,15 @@
 		<title>Chat</title>
 		<!-- <link rel="icon" type="Images/x-icon" href="Images/Logga.png">-->
 
-		<link rel="stylesheet" href="styles/style.css">
+		<!--Link to all css style sheets-->
+		<link rel="stylesheet" href="styles/global.css">
 		<link rel="stylesheet" href="styles/contentContainers.css">
+		<link rel="stylesheet" href="styles/chat.css">
 
 	</head>
 	<body>
 		<div class="contentPanel">
-			<div class="containerTitle">
+			<div class="titleContainer">
 				<h1>Forum</h1>
 				<br>
 				<a class="button showLoggedIn" onclick="onClickLogOut()">Logga ut</a>
@@ -47,7 +49,7 @@
 			<a id="submitMessageButton" class="button showLoggedIn" onclick="submitMessage()">Skicka</a>
 
 
-			<div class="logInBox showLoggedOut">
+			<div class="logInPrompt showLoggedOut">
 				<a href="logga_in.html" class="button">Logga in</a>
 				eller
 				<a href="skapa_konto.html" class="button">Skapa ett konto</a>
