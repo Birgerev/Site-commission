@@ -1,34 +1,38 @@
-//Determine whether we are logged in based on if cookie is set
+// Determine whether the user is logged in by checking if the authentication token cookie is set
 var isLoggedIn = (document.cookie != "empty");
 
-//We use two classes to identify which elements should be shown when logged in or when logged out
-//".showLoggedOut" & ".showLoggedIn"
-//Remove all elements of either class depending on "isLoggedIn"
-if(isLoggedIn)
-		document.querySelectorAll('.showLoggedOut').forEach(element => element.remove());
-else
-		document.querySelectorAll('.showLoggedIn').forEach(element => element.remove());
-
-//Method called when log out button is pressed
-function onClickLogOut() {
-		//Empty the cookie, which contains the authentication token if logged in
-		document.cookie = "empty";
-
-		// Refresh the website
-		location.reload();
+// Use two classes, ".showLoggedOut" and ".showLoggedIn", to identify which elements should be shown when the user is logged in or logged out
+// Remove all elements of either class depending on the value of "isLoggedIn"
+if (isLoggedIn) {
+	// Remove all elements with the class "showLoggedOut"
+	document.querySelectorAll('.showLoggedOut').forEach(element => element.remove());
+} else {
+	// Remove all elements with the class "showLoggedIn"
+	document.querySelectorAll('.showLoggedIn').forEach(element => element.remove());
 }
 
+// This function is called when the user clicks the log out button
+function onClickLogOut() {
+	// Empty the authentication token cookie to log the user out
+	document.cookie = "empty";
+
+	// Refresh the website to update the UI and hide elements for authenticated users
+	location.reload();
+}
+
+// This function is called when the user submits a chat message
 function submitMessage() {
-		//Fetch the login token we use instead of sending password & username
-		var auth_token = document.cookie;
-		//Get the message text from element with id #chatbox
-		var message_content = document.getElementById("chatbox").value;
+	// Get the authentication token from the cookie
+	var auth_token = document.cookie;
 
-		//Open php page with token & text we want to send
-		fetch("php/create_message.php?token=" + auth_token + "&message=" + message_content)
+	// Get the chat message text from the element with ID "chatbox"
+	var message_content = document.getElementById("chatbox").value;
 
-		//Refresh page after a couple millisenconds (so database has time to store the newest message)
-		setInterval(function(){
-		  location.reload();
-		}, 200);
+	// Send an HTTP request to a PHP page with the authentication token and message text as parameters
+	fetch("php/create_message.php?token=" + auth_token + "&message=" + message_content)
+
+	// Wait a couple milliseconds to let the database store the newest message, then refresh the page to display the updated chat messages
+	setInterval(function(){
+		location.reload();
+	}, 200);
 }
