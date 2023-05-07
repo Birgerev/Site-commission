@@ -2,12 +2,9 @@
 <html lang="sv">
 	<head>
 		<meta charset="utf-8">
-
-		<!-- TODO comments-->
 		<title>Chat - Logga In</title>
-		<!-- <link rel="icon" type="Images/x-icon" href="Images/Logga.png">-->
 
-		<!--Link to all css style sheets-->
+		<!-- Link to all css style sheets -->
 		<link rel="stylesheet" href="styles/global.css">
 		<link rel="stylesheet" href="styles/contentContainers.css">
 	</head>
@@ -17,22 +14,29 @@
 				<h1>Logga in!</h1>
 			</div>
 
+			<!-- Input field for username -->
 			<h4>Användarnamn</h4>
-  		<input type="text" id="name">
+  			<input type="text" id="name">
 
+			<!-- Input field for password -->
 			<h4>Lösenord</h4>
-  		<input type="password" id="password">
+  			<input type="password" id="password">
 
+			<!-- Error message if login fails -->
 			<p id="errorText"></p>
-
 			<br><br>
+
+			<!-- Buttons -->
 			<a href="index.php" class="button">Tillbaka</a>
 			<a class="button" onclick="submitForm()">Logga in</a>
+
 			<br><br>
+
+			<!-- Link to create account instead -->
 			<a href="skapa_konto.html">Skapa ett konto</a> istället
 		</div>
+
+		<!-- JavaScript file for handling login form submission -->
+		<script src="scripts/loginForm.js"></script>
 	</body>
-
-	<script src="scripts/loginForm.js"></script>
-
 </html>
