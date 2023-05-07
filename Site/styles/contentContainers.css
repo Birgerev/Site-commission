@@ -71,7 +71,12 @@
 
     border-radius: 10px;
     font-size: 15px;
+}
 
+.submitMessageButton {
+  margin-right: 2%;
+  margin-left: auto;
+  width: 5%;
 }
 
 .logInBox {

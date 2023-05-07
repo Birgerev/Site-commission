@@ -17,3 +17,13 @@ function onClickLogOut() {
 		// Refresh the website
 		location.reload();
 }
+
+function submitMessage() {
+		var auth_token = document.cookie;
+		var message_content = document.getElementById("chatbox").value;
+
+
+		fetch("php/create_message.php?token=" + auth_token + "&message=" + message_content)
+		location.reload();
+
+}
