@@ -21,14 +21,24 @@
 			</div>
 
 			<div id="messageHistory">
-				<div class="message">
-					<h1>Name 1</h1>
-					<p>Message 1</p>
-				</div>
-				<div class="message">
-					<h1>Name 2</h1>
-					<p>Message 2</p>
-				</div>
+				<?php
+				// Create connection
+				$conn = new mysqli("localhost", "root", "", "chat");
+
+				// Check connection
+				if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
+
+				//Get last 100 messages and order them by latest first
+				$rows = $conn->query("SELECT sender_name, message_text FROM messages ORDER BY timestamp DESC LIMIT 100");
+
+				while ($row = $rows->fetch_array(MYSQLI_NUM)) {
+					echo
+					"<div class='message'>
+						<h1>$row[0]</h1>
+						<p>$row[1]</p>
+					</div>";
+				}
+				?>
 			</div>
 
 

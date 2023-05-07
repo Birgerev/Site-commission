@@ -25,7 +25,7 @@ function recievedToken(token) {
 		document.cookie = token;
 
 		//Redirect
-		window.location.href = "index.html";
+		window.location.href = "index.php";
 
 		//TODO save cookie
 }

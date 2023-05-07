@@ -19,11 +19,16 @@ function onClickLogOut() {
 }
 
 function submitMessage() {
+		//Fetch the login token we use instead of sending password & username
 		var auth_token = document.cookie;
+		//Get the message text from element with id #chatbox
 		var message_content = document.getElementById("chatbox").value;
 
-
+		//Open php page with token & text we want to send
 		fetch("php/create_message.php?token=" + auth_token + "&message=" + message_content)
-		location.reload();
 
+		//Refresh page after a couple millisenconds (so database has time to store the newest message)
+		setInterval(function(){
+		  location.reload();
+		}, 200);
 }
